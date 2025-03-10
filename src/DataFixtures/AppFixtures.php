@@ -13,19 +13,19 @@ class AppFixtures extends Fixture
         [
             'title' => 'Task 1',
             'description' => 'Description 1',
-            'status' => 'new',
+            'status' => 'pending',
             'created_at' => '2021-01-01 00:00:00',
         ],
         [
             'title' => 'Task 2',
             'description' => 'Description 2',
-            'status' => 'new',
+            'status' => 'pending',
             'created_at' => '2021-01-02 00:00:00',
         ],
         [
             'title' => 'Task 3',
             'description' => 'Description 3',
-            'status' => 'new',
+            'status' => 'pending',
             'created_at' => '2021-01-03 00:00:00',
         ],
     ];

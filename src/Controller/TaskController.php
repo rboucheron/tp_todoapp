@@ -16,7 +16,7 @@ final class TaskController extends AbstractController
 
     public function __construct(
         private readonly TaskRepository $taskRepository,
-        private EntityManagerInterface  $entityManager
+        private readonly EntityManagerInterface  $entityManager
     )
     {
     }
@@ -57,9 +57,11 @@ final class TaskController extends AbstractController
         Request $request
     ): Response
     {
-        $taskForm = $this->createForm(TaskType::class);
+        $task = new Task();
+        $taskForm = $this->createForm(TaskType::class, $task);
         $taskForm->handleRequest($request);
         if ($taskForm->isSubmitted() && $taskForm->isValid()) {
+            $this->entityManager->persist($task);
             $this->entityManager->flush();
             return $this->redirectToRoute('app_task');
         }

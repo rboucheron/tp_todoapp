@@ -55,12 +55,12 @@ class Task
         return $this;
     }
 
-    public function isStatus(): ?bool
+    public function isStatus(): ?string
     {
         return $this->status;
     }
 
-    public function setStatus(bool $status): static
+    public function setStatus(string $status): static
     {
         $this->status = $status;
 
