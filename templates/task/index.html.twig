@@ -19,7 +19,7 @@
                         <div class="card-body" style="min-height: 300px;" id="{{ status }}">
                             {% for task in tasks %}
                                 {% if task.status == status %}
-                                    <div class="card mb-2" id="{{ task.id }}" onclick="changeTaskStatus({{ task.id }})">
+                                    <div class="card mb-2" id="{{ task.id }}" >
                                         <div class="card-body">
                                             <h6 class="card-title">{{ task.title }}</h6>
                                             <p class="card-text text-muted small">{{ task.description }}</p>
